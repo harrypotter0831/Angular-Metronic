@@ -13,6 +13,16 @@ export const locale = {
       FEATURES: 'Features',
       APPS: 'Apps',
       DASHBOARD: 'Dashboard',
+      // new
+      HOME: "Home", 
+      TRANSACTION_DASHBOARD: "Transaction Dashboard", 
+      CUSTOMER_INFORMATION: "Customer Information", 
+        SENDER: "Sender", 
+        RECEIVER: "Receiver", 
+      SEND_TRANSACTION: "Sent Transaction", 
+        SINGLE_TRANSACTION: "Single Transaction", 
+        EXCEL_UPLOAD: "Excel Upload", 
+      FAQ: "FAQ", 
     },
     AUTH: {
       GENERAL: {

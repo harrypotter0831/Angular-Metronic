@@ -6,33 +6,15 @@
   (ngSubmit)="submit()"
 >
   <!--begin::Heading-->
-  <div class="mb-10 text-center">
-    <h1 class="text-dark mb-3">Create an Account</h1>
-    <div class="text-gray-400 fw-bold fs-4">
-      Already have an account?
-      <a
-        routerLink="/auth/login"
-        class="link-primary fw-bolder"
-        [style.margin-left]="'5px'"
-        >Sign in?</a
-      >
-    </div>
+  <div class="text-center mb-11">
+    <!--begin::Title-->
+    <h1 class="text-dark fw-bolder mb-3">Sign Up</h1>
+    <!--end::Title-->
+    <!--begin::Subtitle-->
+    <div class="text-gray-500 fw-semibold fs-6">Your Social Campaigns</div>
+    <!--end::Subtitle=-->
   </div>
-  <!--end::Heading-->
-
-  <button type="button" class="btn btn-light-primary fw-bolder w-100 mb-10">
-    <img
-      alt="Logo"
-      src="./assets/media/svg/brand-logos/google-icon.svg"
-      class="h-20px me-3"
-    />Sign in with Google
-  </button>
-
-  <div class="d-flex align-items-center mb-10">
-    <div class="border-bottom border-gray-300 mw-50 w-100"></div>
-    <span class="fw-bold text-gray-400 fs-7 mx-2">OR</span>
-    <div class="border-bottom border-gray-300 mw-50 w-100"></div>
-  </div>
+  <!--begin::Heading-->
 
   <!-- begin::Alert error-->
   <ng-container *ngIf="hasError">
@@ -45,10 +27,9 @@
   <!-- end::Alert error-->
 
   <!--begin::Form group-->
-  <div class="row fv-row mb-7">
-    <label class="form-label fw-bolder text-dark fs-6">Fullname</label>
+  <div class="fv-row mb-8">
     <input
-      class="form-control form-control-lg form-control-solid"
+      class="form-control bg-transparent"
       type="text"
       name="fullname"
       formControlName="fullname"
@@ -87,10 +68,9 @@
   <!--end::Form group-->
 
   <!--begin::Form group-->
-  <div class="fv-row mb-7">
-    <label class="form-label fw-bolder text-dark fs-6">Email</label>
+  <div class="fv-row mb-8">
     <input
-      class="form-control form-control-lg form-control-solid"
+      class="form-control bg-transparent"
       type="email"
       placeholder="Email"
       name="email"
@@ -137,10 +117,29 @@
   <!--end::Form group-->
 
   <!--begin::Form group-->
-  <div class="mb-10 fv-row">
-    <label class="form-label fw-bolder text-dark fs-6">Password</label>
+  <!--begin::Input group-->
+  <div class="fv-row mb-8" data-kt-password-meter="true">
+    <!-- <div class="mb-1">
+      <div class="position-relative mb-3">
+        <input class="form-control bg-transparent" type="password" placeholder="Password" name="password" autocomplete="off" />
+        <span class="btn btn-sm btn-icon position-absolute translate-middle top-50 end-0 me-n2" data-kt-password-meter-control="visibility">
+          <i class="bi bi-eye-slash fs-2"></i>
+          <i class="bi bi-eye fs-2 d-none"></i>
+        </span>
+      </div>
+      
+      <div class="d-flex align-items-center mb-3" data-kt-password-meter-control="highlight">
+        <div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2"></div>
+        <div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2"></div>
+        <div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2"></div>
+        <div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px"></div>
+      </div>
+
+    </div>
+    <div class="text-muted">Use 8 or more characters with a mix of letters, numbers &amp; symbols.</div> -->
+    
     <input
-      class="form-control form-control-lg form-control-solid"
+      class="form-control bg-transparent"
       type="password"
       placeholder="Password"
       name="password"
@@ -179,10 +178,9 @@
   <!--end::Form group-->
 
   <!--begin::Form group-->
-  <div class="fv-row mb-5">
-    <label class="form-label fw-bolder text-dark fs-6">Confirm Password</label>
+  <div class="fv-row mb-8">
     <input
-      class="form-control form-control-lg form-control-solid"
+      class="form-control bg-transparent"
       type="password"
       placeholder="Confirm password"
       name="cPassword"
@@ -245,13 +243,13 @@
 
       <label
         for="kt_login_toc_agree"
-        class="form-check-label fw-bold text-gray-700 fs-6"
+        class="form-check-label fw-semibold text-gray-700 fs-base ms-1"
       >
         I Agree the&nbsp;<a
-          href="https://keenthemes.com/metronic/?page=faq"
+          href="#"
           target="_blank"
           class="ms-1 link-primary"
-          >terms and conditions</a
+          >Terms</a
         >.
       </label>
     </div>
@@ -269,7 +267,7 @@
       class="btn btn-lg btn-primary w-100 mb-5"
     >
       <ng-container *ngIf="(isLoading$ | async) === false">
-        <span class="indicator-label">Submit</span>
+        <span class="indicator-label">Sign up</span>
       </ng-container>
       <ng-container *ngIf="isLoading$ | async">
         <span class="indicator-progress" [style.display]="'block'">
@@ -280,16 +278,11 @@
         </span>
       </ng-container>
     </button>
-    <a
-      routerLink="/auth/login"
-      type="button"
-      id="kt_login_signup_form_cancel_button"
-      class="btn btn-lg btn-light-primary w-100 mb-5"
-    >
-      Cancel
-    </a>
   </div>
   <!--end::Form group-->
+
+  <div id="kt_login_signup_form_cancel_button" class="text-gray-500 text-center fw-semibold fs-6">Already have an Account?
+    <a routerLink="/auth/login" class="link-primary fw-semibold">Sign in</a></div>
 </form>
 
 <ng-template

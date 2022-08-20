@@ -1,4 +1,130 @@
-<!-- Dashboard -->
+<!-- Home -->
+<div class="menu-item">
+  <a
+    class="menu-link without-sub"
+    routerLink="/dashboard"
+    routerLinkActive="active"
+    ><span class="menu-icon">
+      <span
+        [inlineSVG]="'./assets/media/icons/duotune/arrows/arr001.svg'"
+        class="svg-icon svg-icon-2"
+      ></span>
+    </span>
+    <span class="menu-title" translate="MENU.HOME"></span
+  ></a>
+</div>
+
+<!-- Transaction Dashboard -->
+<div class="menu-item">
+  <a
+    class="menu-link without-sub"
+    routerLink="/dashboard"
+    routerLinkActive="active"
+    ><span class="menu-icon">
+      <span
+        [inlineSVG]="'./assets/media/icons/duotune/arrows/arr001.svg'"
+        class="svg-icon svg-icon-2"
+      ></span>
+    </span>
+    <span class="menu-title" translate="MENU.TRANSACTION_DASHBOARD"></span
+  ></a>
+</div>
+
+<!-- Customer Information -->
+<div
+  class="menu-item menu-accordion"
+  data-kt-menu-trigger="click"
+  routerLinkActive="here show"
+>
+  <span class="menu-link"
+    ><span class="menu-icon"
+      ><span
+        class="svg-icon svg-icon-2"
+        [inlineSVG]="'./assets/media/icons/duotune/arrows/arr001.svg'"
+      ></span></span
+    ><span class="menu-title" data-link="/crafted/account" translate="MENU.CUSTOMER_INFORMATION"></span
+    ><span class="menu-arrow"></span
+  ></span>
+  <div class="menu-sub menu-sub-accordion" routerLinkActive="menu-active-bg">
+    <div class="menu-item">
+      <a
+        class="menu-link without-sub"
+        routerLinkActive="active"
+        routerLink="/crafted/account/overview"
+        ><span class="menu-bullet"><span class="bullet bullet-dot"></span></span
+        ><span class="menu-title" translate="MENU.SENDER"></span></a
+      >
+    </div>
+    <div class="menu-item">
+      <a
+        class="menu-link without-sub"
+        routerLinkActive="active"
+        routerLink="/crafted/account/settings"
+        ><span class="menu-bullet"><span class="bullet bullet-dot"></span></span
+        ><span class="menu-title" translate="MENU.RECEIVER"></span></a
+      >
+    </div>
+  </div>
+</div>
+
+
+<!-- Send Transaction -->
+<div
+  class="menu-item menu-accordion"
+  data-kt-menu-trigger="click"
+  routerLinkActive="here show"
+>
+  <span class="menu-link"
+    ><span class="menu-icon"
+      ><span
+        class="svg-icon svg-icon-2"
+        [inlineSVG]="'./assets/media/icons/duotune/arrows/arr001.svg'"
+      ></span></span
+    ><span class="menu-title" data-link="/crafted/account" translate="MENU.SEND_TRANSACTION"></span
+    ><span class="menu-arrow"></span
+  ></span>
+  <div class="menu-sub menu-sub-accordion" routerLinkActive="menu-active-bg">
+    <div class="menu-item">
+      <a
+        class="menu-link without-sub"
+        routerLinkActive="active"
+        routerLink="/crafted/account/overview"
+        ><span class="menu-bullet"><span class="bullet bullet-dot"></span></span
+        ><span class="menu-title" translate="MENU.SINGLE_TRANSACTION"></span></a
+      >
+    </div>
+    <div class="menu-item">
+      <a
+        class="menu-link without-sub"
+        routerLinkActive="active"
+        routerLink="/crafted/account/settings"
+        ><span class="menu-bullet"><span class="bullet bullet-dot"></span></span
+        ><span class="menu-title" translate="MENU.EXCEL_UPLOAD"></span></a
+      >
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="menu-item">
+  <a
+    class="menu-link without-sub"
+    routerLink="/faq"
+    routerLinkActive="active"
+    ><span class="menu-icon">
+      <span
+        [inlineSVG]="'./assets/media/icons/duotune/arrows/arr001.svg'"
+        class="svg-icon svg-icon-2"
+      ></span> </span
+    ><span class="menu-title" translate="MENU.FAQ"></span></a
+  >
+</div>
+
+
+
+
+
+
 <div class="menu-item">
   <a
     class="menu-link without-sub"
@@ -12,21 +138,6 @@
     </span>
     <span class="menu-title" translate="MENU.DASHBOARD"></span
   ></a>
-</div>
-
-<!-- Layout builder -->
-<div class="menu-item">
-  <a
-    class="menu-link without-sub"
-    routerLink="/builder"
-    routerLinkActive="active"
-    ><span class="menu-icon">
-      <span
-        [inlineSVG]="'./assets/media/icons/duotune/arrows/arr001.svg'"
-        class="svg-icon svg-icon-2"
-      ></span> </span
-    ><span class="menu-title">Layout Builder</span></a
-  >
 </div>
 
 <!-- Pages -->
